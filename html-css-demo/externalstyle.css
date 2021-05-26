@@ -1,0 +1,19 @@
+.mystyle {
+    color: blueviolet;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+} 
+.second {
+   color: brown;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-size: x-large;
+}
+.third {
+
+    color: #FF9B26;
+    font-weight: bold;
+    font-family: cursive;
+}
+body {
+    background-color: azure;
+}
