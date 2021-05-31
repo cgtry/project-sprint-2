@@ -12,9 +12,17 @@ export default function App() {
     setTextInput("");
   };
 
+  const deleteTweet = (item, index) => {
+    // which tweet to delete
+    list.splice(index, 1);
+
+    // so that we can update the view
+    setList([...list]);
+  };
+
   return (
     <div>
-      <h1 className="bg-primary text-light p-3 d-flex justify-content-center">
+      <h1 className="bg-primary text-light p-3 sticky-top d-flex justify-content-center">
         Mini Twitter
       </h1>
 
@@ -24,19 +32,28 @@ export default function App() {
           value={textInput}
           onChange={(e) => updateTextInput(e)}
           className="form-control mb-1"
-          placeholder="post tweet"
+          placeholder="Write Here"
         />
         <input
           type="button"
-          className="btn btn-dark"
+          className="btn btn-primary"
           onClick={() => postTweet()}
           value="Tweet"
         />
       </div>
 
       {list.map((item, index) => (
-        <div key={index} className="alert alert-secondary">
+        <div
+          key={index}
+          className="alert alert-secondary d-flex justify-content-between align-items-center"
+        >
           {item}
+          <button
+            className="btn btn-outline-danger"
+            onClick={() => deleteTweet(item, index)}
+          >
+            X
+          </button>
         </div>
       ))}
     </div>
