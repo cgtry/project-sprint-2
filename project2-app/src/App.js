@@ -3,26 +3,40 @@ import "./App.css";
 import { useState } from "react";
 
 export default function App() {
-  const [list] = useState([1, 1, 1, 1, 1]);
+  const [textInput, setTextInput] = useState("");
+  const updateTextInput = (e) => setTextInput(e.target.value);
+
+  const [list, setList] = useState([]);
+  const postTweet = () => {
+    setList([textInput, ...list]);
+    setTextInput("");
+  };
+
   return (
     <div>
-      <h1 className="bg-danger text-light p-3 sticky-top fs-1 d-flex justify-content-center">
-        Mini Instagram
+      <h1 className="bg-primary text-light p-3 d-flex justify-content-center">
+        Mini Twitter
       </h1>
 
+      <div className="alert alert-dark row">
+        <input
+          type="text"
+          value={textInput}
+          onChange={(e) => updateTextInput(e)}
+          className="form-control mb-1"
+          placeholder="post tweet"
+        />
+        <input
+          type="button"
+          className="btn btn-dark"
+          onClick={() => postTweet()}
+          value="Tweet"
+        />
+      </div>
+
       {list.map((item, index) => (
-        <div
-          key={index}
-          className="alert-secondary
-           m-3 rounded"
-          style={{ height: "300px" }}
-        >
-          <img
-            src={"https://picsum.photos/300" + index}
-            className="rounded"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            alt=""
-          />
+        <div key={index} className="alert alert-secondary">
+          {item}
         </div>
       ))}
     </div>
