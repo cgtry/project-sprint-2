@@ -21,9 +21,9 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="bg-dark">
       <h1 className="bg-primary text-light p-3 sticky-top d-flex justify-content-center">
-        Mini Twitter
+        fakebook
       </h1>
 
       <div className="alert alert-dark row">
@@ -38,7 +38,7 @@ export default function App() {
           type="button"
           className="btn btn-primary"
           onClick={() => postTweet()}
-          value="Tweet"
+          value="Post"
         />
       </div>
 
