@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "./components/Home";
 import { AboutUs } from "./components/AboutUs";
 import { Project } from "./components/Project";
-import { ContactUs } from "./components/ContactUs";
+import { Login } from "./components/Login";
 import { AppNavBar } from "./Common/AppNavBar";
 import {
   Button,
@@ -35,23 +35,23 @@ function App() {
           <Project />
         </Route>
 
-        <Route path="/contact-us">
-          <ContactUs />
+        <Route path="/login">
+          <Login />
         </Route>
 
         <Route path="/">
           <Home />
         </Route>
       </Switch>
+
+      <div>
+        {/* <h1 className="bg-dark text-light p-2 sticky-top d-flex justify-content-center ">
+        Welcome to Financial Rating
+      </h1> */}
+
+        <CarouselContainer />
+      </div>
     </Router>
-
-    // <div>
-    //   <h1 className="bg-dark text-light p-2 sticky-top d-flex justify-content-center ">
-    //     Welcome to Financial Rating
-    //   </h1>
-
-    //   <CarouselContainer />
-    // </div>
   );
 }
 
