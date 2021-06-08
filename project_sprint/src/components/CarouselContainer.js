@@ -14,21 +14,36 @@ const CarouselContainer = () => {
   return (
     <Carousel fade={true} pause={false}>
       <Carousel.Item interval={2000}>
-        <img className=" d-block h-50 w-100" src={first} alt="First slide" />
+        <img
+          className=" w-100"
+          style={{ height: "95vh" }}
+          src={first}
+          alt="First slide"
+        />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={2000}>
-        <img className="d-block  h-50 w-100" src={second} alt="Third slide" />
+        <img
+          className=" w-100"
+          style={{ height: "95vh" }}
+          src={second}
+          alt="Third slide"
+        />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={2000}>
-        <img className="d-block  h-50 w-100" src={third} alt="Third slide" />
+        <img
+          className=" w-100"
+          style={{ height: "95vh" }}
+          src={third}
+          alt="Third slide"
+        />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
