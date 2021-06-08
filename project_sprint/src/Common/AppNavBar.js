@@ -21,17 +21,21 @@ export function AppNavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/home" className="h5">
+          <Nav.Link as={Link} to="/home" className="h5 btn btn-secondary">
             Home
           </Nav.Link>
 
-          <Nav.Link as={Link} to="/project" className="h5">
-            Project
+          <Nav.Link as={Link} to="/register" className="h5">
+            Register
           </Nav.Link>
           <Nav.Link as={Link} to="/about-us" className="h5">
             About Us
           </Nav.Link>
-          <Nav.Link as={Link} to="/login" className="h5">
+          <Nav.Link
+            as={Link}
+            to="/login"
+            className="h5 btn btn-primary text-light"
+          >
             Login
           </Nav.Link>
         </Nav>
